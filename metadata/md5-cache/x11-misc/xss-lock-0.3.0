@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=use external locker as X screen saver
+EAPI=6
+HOMEPAGE=https://bitbucket.org/raymonad/xss-lock
+KEYWORDS=alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://bitbucket.org/raymonad/xss-lock/get/v0.3.0.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=1423a991a47f8747a7d3b157214ecefd
