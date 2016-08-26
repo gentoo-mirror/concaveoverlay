@@ -1,3 +1,2 @@
-app-misc/hello-world 1.0: A classic example to use when starting something new
 x11-misc/unclutter-xfixes 1.2: a rewrite of unclutter using the x11-xfixes extension
-x11-misc/xss-lock 0.3.0: use external locker as X screen saver
+x11-themes/arc 20160605: A flat theme with transparent elements
