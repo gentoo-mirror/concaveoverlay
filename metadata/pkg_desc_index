@@ -1,1 +1,2 @@
+dev-util/eclim 2.6.0: Expose eclipse features inside of vim.
 x11-misc/unclutter-xfixes 1.2: a rewrite of unclutter using the x11-xfixes extension
