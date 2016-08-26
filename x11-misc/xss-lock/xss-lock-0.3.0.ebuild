@@ -10,7 +10,10 @@ LICENSE="MIT"
 SRC_URI="https://bitbucket.org/raymonad/xss-lock/get/v${PV}.tar.gz"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 MY_TAGHASH='94aec045ffd6'
+RDEPEND='x11-libs/xcb-util'
+DEPEND="${RDEPEND}"
 S="$WORKDIR/raymonad-${PN}-${MY_TAGHASH}"
+
 
 src_install() {
 	cmake -DCMAKE_INSTALL_PREFIX='.' -DMAKE-BUILD_TYPE=Release
