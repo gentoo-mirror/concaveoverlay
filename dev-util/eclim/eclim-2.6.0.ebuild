@@ -16,7 +16,7 @@ SLOT=0
 KEYWORDS='~amd64'
 IUSE='cdt +java php ruby doc'
 
-COMMON_DEPEND='>=dev-util/eclipse-sdk-bin-4.5'
+COMMON_DEPEND='>=dev-util/eclipse-sdk-bin'
 DEPEND="${COMMON_DEPEND}
 	>=virtual/jdk-1.5
 doc? ( dev-python/sphinx )"
