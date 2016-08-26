@@ -15,5 +15,5 @@ S="$WORKDIR/unclutter-xfixes-${PV}"
 
 src_install() {
 	make
-	dobin ${PN}
+	dobin unclutter
 }
