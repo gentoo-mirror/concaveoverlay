@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=small script to manage NetworkManager connections with dmenu instead of nm-applet
+EAPI=6
+HOMEPAGE=https://github.com/firecat53/nmcli-dmenu
+KEYWORDS=alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=MIT
+RDEPEND=dev-lang/python
+SLOT=0
+SRC_URI=https://github.com/firecat53/nmcli-dmenu/archive/1.0.0.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=eae016e8aa29abe1f0b45885762157ff
