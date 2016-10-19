@@ -1,3 +1,2 @@
-dev-util/eclipse-sdk-bin 4.6.0: Eclipse SDK
 x11-misc/nmcli-dmenu 1.0.0: small script to manage NetworkManager connections with dmenu instead of nm-applet
 x11-misc/unclutter-xfixes 1.2: a rewrite of unclutter using the x11-xfixes extension
