@@ -14,5 +14,5 @@ RDEPEND='dev-lang/python
          x11-misc/dmenu'
 
 src_install() {
-	dobin 'nmcli_dmenu'
+	dobin 'networkmanager_dmenu'
 }
