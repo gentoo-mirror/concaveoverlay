@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=An extension to dmenu for quickly opening files and folders
+EAPI=6
+HOMEPAGE=https://github.com/markjones112358/dmenu-extended
+KEYWORDS=alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=MIT
+RDEPEND=dev-lang/python
+SLOT=0
+SRC_URI=https://github.com/markjones112358/dmenu-extended/archive/v17.01101.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=cb146873a8f80e86fc8657342b481fcc
