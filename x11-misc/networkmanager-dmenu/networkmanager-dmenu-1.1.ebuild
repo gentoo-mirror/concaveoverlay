@@ -11,7 +11,11 @@ SRC_URI="https://github.com/firecat53/networkmanager-dmenu/archive/v${PV}.tar.gz
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RDEPEND='dev-lang/python
          dev-python/pygobject
+<<<<<<< HEAD
 	 x11-misc/dmenu'
+=======
+         x11-misc/dmenu'
+>>>>>>> parent of 802368f... add dmenu-extended
 
 src_install() {
 	dobin 'networkmanager_dmenu'
