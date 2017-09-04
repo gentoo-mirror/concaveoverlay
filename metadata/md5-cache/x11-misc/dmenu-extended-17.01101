@@ -7,5 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/python
 SLOT=0
 SRC_URI=https://github.com/markjones112358/dmenu-extended/archive/v17.01101.tar.gz
-_eclass_exported_funcs=src_install:-
 _md5_=cb146873a8f80e86fc8657342b481fcc

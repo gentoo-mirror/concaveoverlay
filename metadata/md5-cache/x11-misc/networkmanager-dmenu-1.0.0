@@ -7,5 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/python dev-python/pygobject x11-misc/dmenu
 SLOT=0
 SRC_URI=https://github.com/firecat53/networkmanager-dmenu/archive/1.0.0.tar.gz
-_eclass_exported_funcs=src_install:-
 _md5_=3db6e5a1d9a8acab959aba7c8cca9712
