@@ -1,5 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# Credit to fkmclane for writing the ebuild
 
 EAPI=6
 
@@ -34,31 +35,31 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
-	if use amd64; then
-		unpack "${MY_P}"-linux64.tar.xz
-	else
-		unpack "${MY_P}"-linux32.tar.xz
-	fi
+    if use amd64; then
+	unpack "${MY_P}"-linux64.tar.xz
+    else
+	unpack "${MY_P}"-linux32.tar.xz
+    fi
 
-	cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
+    cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
 }
 
 src_install() {
-	newicon lib/arduino.png "${MY_PN}".png
-	make_desktop_entry "${MY_PN}" Teensyduino "${MY_PN}"
+    newicon lib/arduino.png "${MY_PN}".png
+    make_desktop_entry "${MY_PN}" Teensyduino "${MY_PN}"
 
-	mkdir -p "${D}"/opt/"${PN}" || die
-	cp -a * "${D}"/opt/"${PN}" || die
+    mkdir -p "${D}"/opt/"${PN}" || die
+    cp -a * "${D}"/opt/"${PN}" || die
 
-	make_wrapper ${MY_PN} "${EROOT}opt/${PN}/${ARDUINO_PN}" "${EROOT}opt/${PN}"
+    make_wrapper ${MY_PN} "${EROOT}opt/${PN}/${ARDUINO_PN}" "${EROOT}opt/${PN}"
 
-	udev_dorules "${WORKDIR}"/49-teensy.rules
+    udev_dorules "${WORKDIR}"/49-teensy.rules
 }
 
 pkg_postinst() {
-	udev_reload
+    udev_reload
 
-	elog "Initial setup for your Teensy requires you to plug in the board,"
-	elog "verify a sketch, then press the reset button on the board. After"
-	elog "that, you can use the upload button."
+    elog "Initial setup for your Teensy requires you to plug in the board,"
+    elog "verify a sketch, then press the reset button on the board. After"
+    elog "that, you can use the upload button."
 }
