@@ -40,7 +40,7 @@ src_unpack() {
 	unpack "${MY_P}"-linux32.tar.xz
     fi
 
-    # cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
+    cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
 }
 
 src_install() {
