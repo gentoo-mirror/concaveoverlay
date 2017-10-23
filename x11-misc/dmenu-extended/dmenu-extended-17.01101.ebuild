@@ -9,9 +9,10 @@ HOMEPAGE='https://github.com/markjones112358/dmenu-extended'
 LICENSE='MIT'
 SRC_URI="https://github.com/markjones112358/dmenu-extended/archive/v${PV}.tar.gz"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-RDEPEND='dev-lang/python'
+RDEPEND='dev-lang/python
+	x11-misc/dmenu'
 
 src_install() {
-	dobin 'dmenu_extended.py'
-	dobin 'dmenu_extended_run'
-}
+	       dobin 'dmenu_extended.py'
+	       dobin 'dmenu_extended_run'
+	       }
