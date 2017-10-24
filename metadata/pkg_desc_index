@@ -1,4 +1,4 @@
-app-crypt/keybase-bin 1.0.31_p20170922160113: Keybase Go client, filesystem, and GUI
+app-crypt/keybase-bin 1.0.34_p20171023181047: Keybase Go client, filesystem, and GUI
 dev-embedded/arduino-mk 1.6.0: Makefile for Arduino sketches.
 dev-embedded/teensyduino-bin 1.37 1.38_beta3: USB-based electronics prototyping platform compatible with Arduino
 x11-misc/dmenu-extended 17.01101: An extension to dmenu for quickly opening files and folders
