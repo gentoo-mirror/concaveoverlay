@@ -10,6 +10,6 @@ HOMEPAGE='https://reference.digilentinc.com/reference/software/adept/start'
 LICENSE='adept-runtime'
 KEYWORDS="~amd64"
 
-src_unpack () {
-    rpm_src_unpack ${A}
+src_install() {
+    cp -R "${S}/" "${D}/" || die "Install failed!"
 }
