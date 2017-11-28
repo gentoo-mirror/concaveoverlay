@@ -27,8 +27,8 @@ src_install() {
     doman share/man/man1/*
 
     into /usr/lib
-    dolib.so lib/*.so
     dolib.so lib/*.so.*
+    dolib.so lib/*.so
 
     into /usr/lib/digilent/waveforms/audio
     dolib.so lib/digilent/waveforms/audio/*.so
