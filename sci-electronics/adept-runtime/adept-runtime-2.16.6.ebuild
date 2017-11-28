@@ -11,4 +11,5 @@ KEYWORDS="~amd64"
 SRC_URI="http://files.digilent.com/Software/Adept2+Runtime/2.16.6/digilent.adept.runtime-${PV}.x86_64.rpm"
 
 src_unpack () {
+    :
 }
