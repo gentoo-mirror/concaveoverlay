@@ -1,38 +1,67 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
 EAPI=6
 
-SRC_URI="http://files.digilent.com/Software/Adept2+Runtime/2.16.6/digilent.adept.runtime_${PV}-x86_64.tar.gz"
-DESCRIPTION='Digilent runtime'
+inherit udev
+
+SRC_URI="
+amd64? ( http://files.digilent.com/Software/Adept2+Runtime/${PV}/digilent.adept.runtime_${PV}-x86_64.tar.gz )
+x86? ( http://files.digilent.com/Software/Adept2+Runtime/${PV}/digilent.adept.runtime_${PV}-i686.tar.gz )
+"
+DESCRIPTION="Digilent runtime"
 SLOT=0
-HOMEPAGE='https://reference.digilentinc.com/reference/software/adept/start'
-LICENSE='adept-runtime'
-KEYWORDS="~amd64"
-S=${WORKDIR}/digilent.adept.runtime_2.16.6-x86_64
+HOMEPAGE="https://reference.digilentinc.com/reference/software/adept/start"
+LICENSE="adept-runtime"
+KEYWORDS="-* ~amd64 ~x86"
+
+src_unpack() {
+	default
+	if use amd64; then
+		mv "${WORKDIR}/digilent.adept.runtime_${PV}-x86_64" "${S}" || die
+	else
+		mv "${WORKDIR}/digilent.adept.runtime_${PV}-i686" "${S}" || die
+	fi
+}
 
 src_install() {
-    dolib lib64/*
-    dosbin bin64/dftdrvdtch
+	exeinto /usr/$(get_libdir)/digilent/adept
+	if use amd64; then
+		doexe lib64/*
+		dosbin bin64/dftdrvdtch
+	else
+		doexe lib/*
+		dosbin bin/dftdrvdtch
+	fi
 
-    insinto /etc/ld.so.conf.d
-    doins digilent-adept-libraries.conf
+	insinto /etc/ld.so.conf.d
+	doins digilent-adept-libraries.conf
 
-    exeinto /usr/share/digilent/adept/data/firmware
-    doins data/firmware/*.HEX
-    doexe data/firmware/*.so
+	insinto /usr/share/digigent/adept/data/firmware
+	doins data/firmware/*.HEX
+	exeinto /usr/share/digigent/adept/data/firmware
+	doexe data/firmware/*.so
+	doexe data/firmware/*.so*
 
-    insinto /usr/share/digilent/adept/data
-    doins data/jtscdvclist.txt
+	insinto /usr/share/digilent/adept/data
+	doins data/jtscdvclist.txt
 
-    insinto /usr/share/digilent/adept/data/xpla3
-    doins data/xpla3/*.map
+	insinto /usr/share/digilent/adept/data/xpla3
+	doins data/xpla3/*.map
 
-    insinto /usr/share/digilent/adept/data/xbr
-    doins data/xbr/*.map
+	insinto /usr/share/digilent/adept/data/xbr
+	doins data/xbr/*.map
 
-    insinto /etc
-    doins digilent-adept.conf
+	insinto /etc
+	doins digilent-adept.conf
 
-    insinto /etc/udev/rules.d
-    doins 52-digilent-usb.rules
+	udev_dorules 52-digilent-usb.rules
+}
+
+pkg_postinst() {
+	udev_reload
+}
+
+pkg_postrm() {
+	[[ -z "${REPLACING_VERSIONS}" ]] && udev_reload
 }
