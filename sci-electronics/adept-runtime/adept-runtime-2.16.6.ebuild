@@ -13,5 +13,5 @@ KEYWORDS="~amd64"
 
 src_install() {
     dodir /
-    cp -R "${WORKDIR}/usr ${WORKDIR}/etc" "${D}/" || die "Install failed!"
+    cp -R "${S}/" "${D}/" || die "Install failed!"
 }
