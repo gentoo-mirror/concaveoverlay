@@ -1,6 +1,7 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
+EAPI=6
 inherit rpm
 
 SRC_URI="http://files.digilent.com/Software/Adept2+Runtime/2.16.6/digilent.adept.runtime-${PV}.x86_64.rpm"
@@ -11,5 +12,6 @@ LICENSE='adept-runtime'
 KEYWORDS="~amd64"
 
 src_install() {
+    dodir /
     cp -R "${S}/" "${D}/" || die "Install failed!"
 }
