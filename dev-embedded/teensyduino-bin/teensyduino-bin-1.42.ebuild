@@ -24,7 +24,7 @@ IUSE=""
 RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN}"
 
 RESTRICT="binchecks preserve-libs strip"
 
