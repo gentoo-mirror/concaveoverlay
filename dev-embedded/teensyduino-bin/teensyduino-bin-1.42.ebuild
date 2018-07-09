@@ -10,7 +10,6 @@ HOMEPAGE="https://www.pjrc.com/teensy/"
 
 MY_PV="$(replace_all_version_separators '')"
 MY_PN="${PN/-bin}"
-MY_P="${MY_PN}-${PV}"
 
 ARDUINO_PN="arduino"
 
