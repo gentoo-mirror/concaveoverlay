@@ -29,7 +29,7 @@ S="${WORKDIR}/${MY_P}"
 RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
-	unpack "${P}".tar.xz
+	unpack "${P}".tar.gz
 
     cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
 }
