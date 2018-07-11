@@ -9,7 +9,7 @@ HOMEPAGE="http://www.veripool.org/wiki/verilator"
 SRC_URI="http://www.veripool.org/ftp/${P}.tgz"
 
 LICENSE="|| ( Artistic-2 LGPL-3 )"
-SLOT="${PV}"
+SLOT="$0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
