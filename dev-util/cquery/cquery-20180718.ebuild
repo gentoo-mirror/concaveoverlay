@@ -3,19 +3,21 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils git-r3
 
 DESCRIPTION="A C/C++ language server supporting multi-mullion line code base, powered by libclang."
 HOMEPAGE="https://github.com/cquery-project/cquery"
 
-SRC_URI="https://github.com/cquery-project/cquery/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/cquery-project/cquery"
+EGIT_COMMIT="b523aa928acf8ffb3de6b22c79db7366a9672489"
+# SRC_URI="https://github.com/cquery-project/cquery/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="sys-devel/clang"
-RDEPEND="${DEPEND}"
+DEPENT="sys-devel/clang"
+RDEPENT="${DEPEND}"
 
 src_configure() {
     local mycmakeargs=(
