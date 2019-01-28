@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
     local mycmakeargs=(
-        # -DSYSTEM_CLANG=ON
+        -DSYSTEM_CLANG=ON
         -DCMAKE_PREFIX_PATH="/usr/lib/llvm/7"
     )
     cmake-utils_src_configure
