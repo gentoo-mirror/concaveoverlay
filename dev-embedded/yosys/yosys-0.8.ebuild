@@ -13,7 +13,7 @@ SRC_URI="https://github.com/cliffordwolf/${PN}/archive/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="+abc"
 
 RDEPEND="
 	sys-libs/readline:=
@@ -33,7 +33,7 @@ DEPEND="
 S="${WORKDIR}/${PN}-${P}"
 src_configure() {
 	emake config-gcc
-	echo "ENABLE_ABC := 0" >> "${S}/Makefile.conf"
+	echo "ENABLE_ABC := $(usex abc 1 0)" >> "${S}/Makefile.conf"
 }
 
 src_compile() {
