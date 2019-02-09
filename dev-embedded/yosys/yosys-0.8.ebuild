@@ -16,30 +16,30 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
-	sys-libs/readline:=
-	virtual/libffi
-	dev-vcs/git
-	dev-lang/tcl:=
-	dev-vcs/mercurial"
+        sys-libs/readline:=
+        virtual/libffi
+        dev-vcs/git
+        dev-lang/tcl:=
+        dev-vcs/mercurial"
 
 DEPEND="
-	${PYTHON_DEPS}
-	sys-devel/bison
-	sys-devel/flex
-	sys-apps/gawk
-	virtual/pkgconfig
-	${RDEPEND}"
+        ${PYTHON_DEPS}
+        sys-devel/bison
+        sys-devel/flex
+        sys-apps/gawk
+        virtual/pkgconfig
+        ${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${P}"
 src_configure() {
-	emake config-gcc
-	echo "ENABLE_ABC := 0" >> "${S}/Makefile.conf"
+    emake config-gcc
+    echo "ENABLE_ABC := 0" >> "${S}/Makefile.conf"
 }
 
 src_compile() {
-	emake PREFIX="${EPREFIX}/usr"
+    emake PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
-	emake PREFIX="${ED}/usr" install
+    emake PREFIX="${ED}/usr" install
 }
