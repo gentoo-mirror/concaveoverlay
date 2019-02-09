@@ -10,10 +10,10 @@ LICENSE=ISC
 SLOT=0
 IUSE="ice40 ecp5"
 
-DEPEND="ice40? ( sci-electronics/icestorm 
-	         >=sci-electronics/yosys-0.8 )
+DEPEND="ice40? ( dev-embedded/icestorm 
+	         >=dev-embedded/yosys-0.8 )
 	ecp5? ( sci-electronics/prjtrellis 
-	        >sci-electronics/yosys-0.8 )
+	        >dev-embedded/yosys-0.8 )
 	dev-qt/qtcore:5
 	dev-libs/boost"
 
