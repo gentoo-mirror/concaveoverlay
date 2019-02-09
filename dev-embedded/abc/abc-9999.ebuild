@@ -11,5 +11,3 @@ EGIT_REPO_URI="https://github.com/berkeley-abc/abc.git"
 
 LICENSE="abc"
 SLOT="0"
-
-S="${WORKDIR}/${MY_P}"
