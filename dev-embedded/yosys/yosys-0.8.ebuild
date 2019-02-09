@@ -1,45 +1,22 @@
-# Copyright 1999-2018 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
+EAPI=6
 
-EAPI="6"
+S=$WORKDIR/$PN-$PN-$PV
 
-PYTHON_COMPAT=( python3_{4,5,6,7} )
-inherit eutils python-any-r1
+DESCRIPTION="framework for Verilog RTL synthesis"
+HOMEPAGE="http://www.clifford.at/yosys/"
+SRC_URI="https://github.com/YosysHQ/$PN/archive/$P.tar.gz"
+LICENSE=ISC
+SLOT=0
+KEYWORDS=~amd64
 
-DESCRIPTION="Yosys - Yosys Open SYnthesis Suite"
-HOMEPAGE="http://www.clifford.at/icestorm/"
-LICENSE="ISC"
-SRC_URI="https://github.com/cliffordwolf/${PN}/archive/${P}.tar.gz"
-
-SLOT="0"
-KEYWORDS="~amd64"
-IUSE=""
-
-RDEPEND="
-        sys-libs/readline:=
-        virtual/libffi
-        dev-vcs/git
-        dev-lang/tcl:=
-        dev-vcs/mercurial"
-
-DEPEND="
-        ${PYTHON_DEPS}
-        sys-devel/bison
-        sys-devel/flex
-        sys-apps/gawk
-        virtual/pkgconfig
-        ${RDEPEND}"
-
-S="${WORKDIR}/${PN}-${P}"
-src_configure() {
-    emake config-gcc
-    echo "ENABLE_ABC := 0" >> "${S}/Makefile.conf"
-}
+DEPEND="dev-vcs/git
+	media-gfx/xdot
+	dev-libs/boost"
 
 src_compile() {
-    emake PREFIX="${EPREFIX}/usr"
+	emake DESTDIR="$D" PREFIX=/usr
 }
 
 src_install() {
-    emake PREFIX="${ED}/usr" install
+	emake DESTDIR="$D" PREFIX=/usr install	
 }
