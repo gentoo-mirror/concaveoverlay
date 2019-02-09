@@ -16,3 +16,12 @@ DEPEND="ice40? ( sci-electronics/icestorm
 	        >sci-electronics/yosys-0.8 )
 	dev-qt/qtcore:5
 	dev-libs/boost"
+
+src_configure() {
+	local mycmakeargs=(
+		$(usex ice40 $(usex ecp5 "-DARCH=all" "-DARCH=ice40") $(usex ecp5 "-DARCH=ecp5" "-DARCH=generic"))
+		$(usex ice40 -DICEBOX_ROOT=/usr/share/icebox "")
+		$(usex ecp5 -DTRELLIS_ROOT=/usr/share/trellis "")
+	)
+	cmake-utils_src_configure
+}
