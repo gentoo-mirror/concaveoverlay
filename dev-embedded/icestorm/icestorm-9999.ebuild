@@ -25,6 +25,7 @@ IUSE="ftdi"
 RDEPEND="ftdi? ( dev-embedded/libftdi:= )"
 DEPEND="
 		${PYTHON_DEPS}
+                dev-embedded/libftdi
 		virtual/pkgconfig
 		${RDEPEND}"
 
