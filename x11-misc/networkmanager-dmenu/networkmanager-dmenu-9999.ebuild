@@ -9,7 +9,6 @@ DESCRIPTION='small script to manage NetworkManager connections with dmenu instea
 SLOT=0
 HOMEPAGE='https://github.com/firecat53/nmcli-dmenu'
 LICENSE='MIT'
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RDEPEND='dev-lang/python
          dev-python/pygobject
          x11-misc/dmenu'
