@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=7
 inherit git-r3
 EGIT_REPO_URI="https://github.com/firecat53/networkmanager-dmenu.git"
 DESCRIPTION='small script to manage NetworkManager connections with dmenu instead of nm-applet'
@@ -15,5 +15,5 @@ RDEPEND='dev-lang/python
          x11-misc/dmenu'
 
 src_install() {
-	dobin 'nmcli_dmenu'
+	dobin 'networkmanager_dmenu'
 }

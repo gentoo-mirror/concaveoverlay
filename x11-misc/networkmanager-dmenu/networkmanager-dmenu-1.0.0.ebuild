@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=7
 DESCRIPTION='small script to manage NetworkManager connections with dmenu instead of nm-applet'
 SLOT=0
 HOMEPAGE='https://github.com/firecat53/nmcli-dmenu'
