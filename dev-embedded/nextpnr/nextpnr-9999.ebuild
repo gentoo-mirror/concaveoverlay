@@ -15,7 +15,7 @@ DEPEND="ice40? ( dev-embedded/icestorm
 	ecp5? ( sci-electronics/prjtrellis 
 	        >dev-embedded/yosys-0.8 )
 	dev-qt/qtcore:5
-	dev-libs/boost"
+	dev-libs/boost[python]"
 
 src_configure() {
 	local mycmakeargs=(
