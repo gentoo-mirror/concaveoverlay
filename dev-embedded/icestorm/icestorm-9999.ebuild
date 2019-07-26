@@ -9,7 +9,7 @@ inherit eutils python-any-r1 toolchain-funcs
 DESCRIPTION="IceStorm - tools for analyzing and creating bitstreams for Lattice iCE40 FPGAs"
 HOMEPAGE="http://www.clifford.at/icestorm/"
 LICENSE="ISC"
-if [ ${PV} == "9999" ]; then
+if [ ${PV} == *9999* ]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/cliffordwolf/icestorm.git"
 else
