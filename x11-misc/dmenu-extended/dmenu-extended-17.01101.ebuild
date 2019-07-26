@@ -14,4 +14,5 @@ RDEPEND='dev-lang/python'
 src_install() {
 	dobin 'dmenu_extended.py'
 	dobin 'dmenu_extended_run'
+    dobin 'dmenu_extended_cache_build'
 }
