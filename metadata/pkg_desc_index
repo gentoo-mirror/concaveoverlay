@@ -1,0 +1,11 @@
+dev-embedded/arduino-mk 1.6.0: Makefile for Arduino sketches.
+dev-embedded/icestorm 9999: IceStorm - tools for analyzing and creating bitstreams for Lattice iCE40 FPGAs
+dev-embedded/nextpnr 9999: portable FPGA place and route tool
+dev-embedded/teensyduino-bin 1.42: USB-based electronics prototyping platform compatible with Arduino
+dev-embedded/yosys 0.8: Yosys - Yosys Open SYnthesis Suite
+dev-util/bear 2.3.13: a tool that generates a compilation database for clang tooling
+dev-util/ccls 0.20181225.8 0.20190308: A C/C++ language server supporting multi-mullion line code base, powered by libclang.
+dev-util/cquery 20180718 20180718-r1 20180718-r2: A C/C++ language server supporting multi-mullion line code base, powered by libclang.
+sci-electronics/verilator 4.006 4.008 4.010 4.014 4.016: Verilog compiler and simulator
+x11-misc/dmenu-extended 17.01101: An extension to dmenu for quickly opening files and folders
+x11-misc/networkmanager-dmenu 1.0.0 1.1 9999: small script to manage NetworkManager connections with dmenu instead of nm-applet
