@@ -7,5 +7,6 @@ dev-util/bear 2.3.13: a tool that generates a compilation database for clang too
 dev-util/ccls 0.20181225.8 0.20190308: A C/C++ language server supporting multi-mullion line code base, powered by libclang.
 dev-util/cquery 20180718 20180718-r1 20180718-r2: A C/C++ language server supporting multi-mullion line code base, powered by libclang.
 sci-electronics/verilator 4.006 4.008 4.010 4.014 4.016 4.018: Verilog compiler and simulator
+sci-libs/scikits_learn 0.21.3: Python modules for machine learning and data mining
 x11-misc/dmenu-extended 17.01101: An extension to dmenu for quickly opening files and folders
 x11-misc/networkmanager-dmenu 1.0.0 1.1 9999: small script to manage NetworkManager connections with dmenu instead of nm-applet
